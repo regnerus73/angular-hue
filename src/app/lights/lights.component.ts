@@ -46,7 +46,7 @@ export class LightsComponent implements OnInit {
           data[d].id = d;
           this.lights.push(data[d]);
         }
-        this.lights = this.lights.sort((l1, l2) =>
+        this.lights = this.lights.sort((l1, l2) => {
           var A = l1.name.toLowerCase();
           var B = l2.name.toLowerCase();
           if (A < B) {
@@ -55,7 +55,8 @@ export class LightsComponent implements OnInit {
             return 1;
           } else {
             return 0;
-          });
+          }
+        });
       }
       );
   }
